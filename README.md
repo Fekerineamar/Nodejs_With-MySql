@@ -30,8 +30,6 @@ it can generate a PHP file for example index.php.jpg! So your server will accept
 
 - Make sure you installed Nodejs ^16.15.1
 - Mysql server
-- After you download the code go to db.js and change information of the database
-- the default is (root@localhost, pass=Admin123)
 
 ```
 git clone https://github.com/Fekerineamar/Nodejs_With-MySql
@@ -46,3 +44,5 @@ npm install
 npm start
 ```
 
+- After you download go to _data/db.js and change information of your database
+- the default is (root@localhost, pass=Admin123)
