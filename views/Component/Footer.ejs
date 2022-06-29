@@ -1,0 +1,35 @@
+<footer class="footer py-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-4 text-lg-start text-white">
+        Copyright &copy; Cody4code <span id="year"></span>
+      </div>
+      <div class="col-lg-4 my-3 my-lg-0">
+        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"
+          ><i class="lab la-twitter"></i
+        ></a>
+        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/Cody4Code-343548942349049" aria-label="Facebook"
+          ><i class="lab la-facebook-f"></i
+        ></a>
+        <a class="btn btn-dark btn-social mx-2" href="https://linkedin.com/in/fekerine" aria-label="LinkedIn"
+          ><i class="lab la-linkedin-in"></i
+        ></a>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a class="link-dark text-decoration-none me-3" href="#!"
+          >Privacy Policy</a
+        >
+        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script> 
+    <script>
+      let dt= new Date();
+      let thisyear = dt.getUTCFullYear()
+      document.querySelector('#year').innerText = thisyear;
+    </script>
+    </body>
+</html>

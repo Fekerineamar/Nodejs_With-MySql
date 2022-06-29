@@ -1,0 +1,122 @@
+<%- include("Head")%>
+<%- include("Navbar")%>
+
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center py-5  ">
+                <div class="wrapper-img mt-5">
+                    <img class="rounded-circle" name="img" width="150px" src="<%= image %>">
+                    <input type="file" name="image" accept="image/*" />                
+                </div>
+                <p class="text-danger" id="err"></p>
+                <span class="font-weight-bold text-capitalize"><%= fname %> </span>
+            </div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                <form method="post" action="/profile">
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="labels">Firtname</label>
+                        <input name="name" type="text" class="form-control text-capitalize" placeholder="first name" value="<%= fname %>" required>
+                        <div class="invalid-feedback" name="feedback">
+                            Invalid Name!
+                          </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labels">Lastname</label>
+                        <input name="last_name" type="text" class="form-control text-capitalize" value="<%=lname %>" placeholder="surname">
+                        <div class="invalid-feedback" name="feedback">
+                            Invalid Last Name!
+                          </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <label class="labels">Mobile Number</label>
+                        <input name="phone" type="number" class="form-control" placeholder="enter phone number" value="<%=phone %>">
+                        <div class="invalid-feedback" name="feedback">
+                            Invalid number!
+                          </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Address Line 1</label>
+                        <input name="addr1" type="text" class="form-control text-capitalize" placeholder="enter address line 1" value="<%=addr1 %>">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Address Line 2</label>
+                        <input name="addr2" type="text" class="form-control text-capitalize" placeholder="enter address line 2" value="<%=addr2 %>">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Email ID</label>
+                        <input name="email" type="text" class="form-control" placeholder="enter email id" value="<%=email %>" required>
+                        <div class="invalid-feedback" name="feedback">
+                            Invalid Email!
+                          </div>
+                    </div>
+                    <div class="col-md-12 position-relative">
+                        <label class="labels">Password</label>
+                        <input name="password" type="password" class="form-control" placeholder="New password" value="" required>
+                        <div class="invalid-feedback" name="feedback">
+                            Invalid Password!
+                          </div>
+                    <label
+                        id="showp"
+                         class="position-absolute end-0 top-0 me-4"
+                         style="margin-top: 32px;"  
+                         ><i class="las la-eye-slash la-eye"></i>
+                         </label>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label class="labels">Country</label>
+                        <input name="country" type="text" class="form-control text-capitalize" placeholder="country" value="<%=country %>">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labels">State/Region</label>
+                        <input name="state" type="text" class="form-control text-capitalize" value="<%=state %>" placeholder="state">
+                    </div>
+                </div>
+                <div class="mt-5 text-center">
+                    <button class="btn btn-warning profile-button" type="submit">Save Profile</button>
+                </div>
+            </form>
+                <div class="mt-5 text-center">   
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modaldelete">
+                        Delete Account!                    
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+  <!-- Modal -->
+  <div class="modal fade" id="Modaldelete" tabindex="-1" aria-labelledby="ModalLiveLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content text-center">
+          <div class="modal-header bg-danger text-white d-flex justify-content-center">
+            <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+          </div>
+          <div class="modal-body">
+           Confirm Delete Account <i class="las la-times text-danger" style="font-size:15px"></i>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+            <form action="/delete" method="post">
+                  <button class="btn btn-danger text-center" type="submit">Yes!</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Footer-->
+  <%- include("Footer")%>
+</body>
