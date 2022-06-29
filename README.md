@@ -10,11 +10,12 @@ it can generate a PHP file for example index.php.jpg! So your server will accept
 - So before accepting this file to store on the server and sending it back to the client I tried to make a simple solution to check the binary if it is   not a jpg or png we will delete it! otherwise, we will store the name in the database and return it to the client if it requests it!
 
 
-## Read How to install or watch on Youtube!
+## Read How to install or watch on [Youtube!](https://www.youtube.com/channel/UC1_LGJISYiWv3SDbhRF6QsQ/videos)
 
 
 ## Package Needed!
 ```
+"nodemon": ^2.0.16
 "bcrypt": "^5.0.1",
 "body-parser": "^1.20.0",
 "csurf": "^1.11.0",
@@ -29,6 +30,7 @@ it can generate a PHP file for example index.php.jpg! So your server will accept
 ## How To install
 
 - Make sure you installed Nodejs ^16.15.1
+- install nodemon globaly with ``` npm install -g nodemon ``` # or using yarn: ``` yarn global add nodemon``` 
 - Mysql server
 - open your terminal and run:
 ```
@@ -43,6 +45,6 @@ npm install
 ```
 npm start
 ```
-
+- Any err just do `
 - After you download go to _data/db.js and change information of your database
 - the default is (root@localhost, pass=Admin123)
