@@ -30,7 +30,7 @@ it can generate a PHP file for example index.php.jpg! So your server will accept
 
 - Make sure you installed Nodejs ^16.15.1
 - Mysql server
-
+- open your terminal and run:
 ```
 git clone https://github.com/Fekerineamar/Nodejs_With-MySql
 ```
