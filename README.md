@@ -45,6 +45,6 @@ npm install
 ```
 npm start
 ```
-- Any err just do `
+- Any err just do ```npm cache clear --force```
 - After you download go to _data/db.js and change information of your database
 - the default is (root@localhost, pass=Admin123)
