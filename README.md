@@ -1,8 +1,19 @@
-NodeJS Sign in Signup with Fetch API/MySQL DB
+# README.md
 
-# How To Use
+# NodeJS Sign in Signup with Fetch API/MySQL DB
 
-# Package Needed!
+- This app for nodejs with MySQL database,
+- we will create a home page with a signup/login popup and a user profile page to edit username, email, password, etc.
+- Also we have validation in the frontend and backend, validating all Forms and image files,
+checking the image extension .jpeg/.png with multer is not enough, this will allow attackers to inject code to your server, 
+it can generate a PHP file for example index.php.jpg! So your server will accept the extension .jpg and in fact, the file is not jpg it is PHP and when reading the file it can be executed on your server!! (this is just an example of PHP it can be anything!) 
+- So before accepting this file to store on the server and sending it back to the client I tried to make a simple solution to check the binary if it is -  not a jpg or png we will delete it! otherwise, we will store the name in the database and return it to the client if it requests it!
+
+
+## Read How to install or watch on Youtube!
+
+
+## Package Needed!
 ```
 "bcrypt": "^5.0.1",
 "body-parser": "^1.20.0",
@@ -15,27 +26,23 @@ NodeJS Sign in Signup with Fetch API/MySQL DB
 "mysql": "^2.18.1"
 ```
 
-## Read Carefully or watch on Youtube!
+## How To install
 
-this app for nodejs with mysql database, we will create Home page with Signup/Signin Popup and profile page for the user to modify username and email & password, etc..
-also we have validation in frontEnd and backend, validation for all forms and also for image, validation for image checking the binary of file ,
-because checking extention .jpeg/.png with multer is not enough, this will let the attckers inject a code for your server for example he can make a php file like index.php.jpg!
-so at this time your server will accept the extention .jpg and actually the file is not jpg it's php and when reading the file it can excute on your server!!,
-(this is just an example for php it can be any thing!)
-so before accept that file to store it on the server and sending back to the client I make a simple solution to verify the binary of the file,
-if it's not jpg or png we will delete it! if it's a validate binary we will store the name to database and return it to the client if request it!
-
-#How To install
-
-- Make sure you installed Nodejs ^16v
+- Make sure you installed Nodejs ^16.15.1
 - Mysql server
 - After you download the code go to db.js and change information of the database
 - the default is (root@localhost, pass=Admin123)
 
 ```
 git clone https://github.com/Fekerineamar/Nodejs_With-MySql
+```
+```
 cd Nodejs_With-MySql
-npm install 
+```
+```
+npm install
+```
+```
 npm start
 ```
 
