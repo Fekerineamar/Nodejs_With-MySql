@@ -30,7 +30,7 @@ it can generate a PHP file for example index.php.jpg! So your server will accept
 ## How To install
 
 - Make sure you installed Nodejs ^16.15.1
-- install nodemon globaly with ``` npm install -g nodemon ``` # or using yarn: ``` yarn global add nodemon``` 
+- install nodemon globally with ``` npm install -g nodemon ``` # or using yarn: ``` yarn global add nodemon``` 
 - Mysql server
 - open your terminal and run:
 ```
